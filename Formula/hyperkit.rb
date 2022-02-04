@@ -40,6 +40,7 @@ class Hyperkit < Formula
 
     args = []
     args << "GIT_VERSION=#{version}"
+    args << "GIT_VERSION_SHA1=\"b54460a1b41b487262d03c9685ae8b50dbc6607a\""
     system "opam", "config", "exec", "--", "make", *args
 
     bin.install "build/hyperkit"
